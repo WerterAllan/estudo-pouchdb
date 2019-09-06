@@ -1,2 +1,2 @@
 
-Para acessar o app clique [aqui]([https://werterallan.github.io/estudo-pouchdb/)
+Para acessar o app clique [aqui] ([https://werterallan.github.io/estudo-pouchdb/)
