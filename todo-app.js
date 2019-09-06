@@ -11,19 +11,23 @@ const TodoApp = (nomeBanco) => {
         console.log('banco inicializado', _db);
     }
 
-    let _destruirBanco = () => {
+    let _destruirERecriarBanco = () => {
 
-        _db.destroy( Notificacao );
+        _db.destroy()
+            .then(x => {
+                _db = new PouchDB(nomeBanco);
+                console.log("Banco destruido e recriado com sucesso", x);
+            })
+            .catch(e => console.log("Erro ao destruir o banco", e));
 
     }
-
 
     let _addTodo = (todo) => {
 
         if (!TarefaValida(todo))
             return;
 
-        _db.post(todo, Notificacao );
+        _db.post(todo, Notificacao);
 
     }
 
@@ -33,7 +37,7 @@ const TodoApp = (nomeBanco) => {
     return {
 
         AddTodo: _addTodo
-        ,DestruirBanco: _destruirBanco
+        , DestruirERecriarBanco: _destruirERecriarBanco
 
     }
 
