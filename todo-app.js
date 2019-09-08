@@ -1,4 +1,6 @@
-import './pouchdb-7.1.1.js'
+'use strict';
+
+import './libs/pouchdb-7.1.1.js';
 import { TarefaValida, Notificacao } from './util.js';
 
 const TodoApp = (nomeBanco) => {

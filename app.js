@@ -1,4 +1,6 @@
-import './pouchdb-7.1.1.js';
+'use strict';
+
+import './libs/pouchdb-7.1.1.js';
 import TabelaDeTarefas from './tabela-de-tarefas.js'
 import Formulario from './formulario.js';
 import TodoApp from './todo-app.js';
@@ -21,7 +23,7 @@ const app = async () => {
 
 
     document.getElementById("btnDestruir")
-        .addEventListener("click", x => todoApp.DestruirBanco() );
+        .addEventListener("click", x => todoApp.DestruirERecriarBanco() );
 
 }
 

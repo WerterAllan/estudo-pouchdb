@@ -1,6 +1,5 @@
 'use strict';
 
-
 let GetById = (id) => ( document.getElementById(id) ||  { value: "" } ).value
 let SetById = (id, value) => document.getElementById(id).value = value;
 let TarefaValida = (tarefa) => !!tarefa && tarefa.titulo !== "" && tarefa.descricao !== "";
